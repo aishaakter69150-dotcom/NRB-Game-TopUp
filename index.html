@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NRB Gaming Zone - Diamond TopUp</title>
+<style>
+*{box-sizing:border-box} body{font-family:sans-serif;background:#f6f6f6;margin:0;padding:0}
+.top{background:#e11d2e;color:white;padding:12px 15px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
+.top b{font-size:20px} .top span{font-size:22px}
+.search{padding:12px} .search input{width:100%;padding:12px 15px;border:1px solid #ddd;border-radius:25px;font-size:15px;background:white}
+.banner{margin:0 12px;background:linear-gradient(135deg,#ff2d2d,#ff7a00);color:white;border-radius:15px;padding:18px;text-align:center}
+.banner h2{margin:0;font-size:26px} .banner p{margin:5px 0 0}
+.sec{padding:15px 12px 5px;font-size:19px;font-weight:bold}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 12px}
+.card{background:white;border-radius:15px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.08);text-align:center;padding-bottom:12px;cursor:pointer}
+.card .img{height:110px;display:flex;align-items:center;justify-content:center;font-size:55px;background:#fff0f0}
+.card b{display:block;margin:8px 0 2px;font-size:16px} .card small{color:#666} .card .price{color:#e11d2e;font-weight:bold;margin-top:4px}
+.list{padding:0 12px} .item{background:white;border-radius:12px;padding:12px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.item b{font-size:15px} .item span{color:#e11d2e;font-weight:bold}
+input{width:100%;padding:13px;border:1px solid #ddd;border-radius:12px;margin:8px 0;font-size:16px}
+.btn{display:block;background:#25D366;color:white;text-align:center;padding:15px;border-radius:12px;text-decoration:none;font-weight:bold;font-size:17px;margin:12px}
+.bkash{background:#e2136e;color:white;padding:13px;border-radius:12px;text-align:center;margin:0 12px}
+</style>
+</head>
+<body>
+<div class="top"><b>🔥 NRB GAMING ZONE</b><span>☰</span></div>
+<div class="search"><input placeholder="🔍 Search Games, Top Up..."></div>
+<div class="banner"><h2>💎 DISCOUNT OFFER 💎</h2><p>সব ডায়মন্ডে স্পেশাল ডিসকাউন্ট চলছে!</p><p>⭐ 100% Trusted - Fast Delivery ⭐</p></div>
+
+<div class="sec">🔥 FF Games Topup</div>
+<div class="grid">
+<div class="card" onclick="pick('Weekly - 158 TK')"><div class="img">📅</div><b>Weekly Membership</b><small>7 Days</small><div class="price">158 TK</div></div>
+<div class="card" onclick="pick('Monthly - 785 TK')"><div class="img">🗓️</div><b>Monthly Membership</b><small>30 Days</small><div class="price">785 TK</div></div>
+<div class="card" onclick="pick('Weekly Lite - 40 TK')"><div class="img">⚡</div><b>Weekly Lite</b><small>7 Days Lite</small><div class="price">40 TK</div></div>
+<div class="card" onclick="pick('Level Up Pass - 165 TK')"><div class="img">🎮</div><b>Level Up Pass</b><small>Special Pass</small><div class="price">165 TK</div></div>
+</div>
+
+<div class="sec">💎 UID Topup - Diamond</div>
+<div class="list" id="list"></div>
+
+<div style="padding:0 12px"><h3>2. Account Info</h3>
+<input id="uid" placeholder="তোমার Free Fire UID দাও">
+<input id="name" placeholder="তোমার নাম দাও">
+<input id="trx" placeholder="bKash TrxID দাও">
+<p>👆 উপরে ডায়মন্ড সিলেক্ট করো, তারপর নিচে অর্ডার করো</p>
+</div>
+<div class="bkash">bKash এ টাকা পাঠাও<br><b>01856695097</b><br>Send Money করে TrxID টা দাও</div>
+<a class="btn" href="#" onclick="order()">✅ WhatsApp এ অর্ডার করো</a>
+<p style="text-align:center;color:#666;font-size:13px">WhatsApp: 01826536129 | bKash: 01856695097</p>
+
+<script>
+let selected="Diamond";
+let items=[["25 Diamond","22 TK"],["50 Diamond","38 TK"],["100 Diamond","85 TK"],["115 Diamond","79 TK"],["240 Diamond","158 TK"],["355 Diamond","237 TK"],["480 Diamond","316 TK"],["610 Diamond","400 TK"],["850 Diamond","558 TK"],["1090 Diamond","716 TK"],["1240 Diamond","800 TK"],["1850 Diamond","1200 TK"],["2090 Diamond","1358 TK"],["2530 Diamond","1600 TK"],["5060 Diamond","3200 TK"],["10120 Diamond","6400 TK"],["12650 Diamond","8000 TK"],["25300 Diamond","16000 TK"]];
+let h="";
+items.forEach(i=>{h+=`<div class="item" onclick="pick('${i[0]} - ${i[1]}')"><b>${i[0]} 💎</b><span>${i[1]}</span></div>`});
+document.getElementById("list").innerHTML=h;
+function pick(t){selected=t;alert("সিলেক্ট হইছে: "+t)}
+function order(){let u=document.getElementById("uid").value;let n=document.getElementById("name").value;let tr=document.getElementById("trx").value;let msg="Assalamualaikum NRB Gaming Zone, Ami Order Korte Chai%0AItem: "+selected+"%0AUID: "+u+"%0AName: "+n+"%0ATrxID: "+tr;window.open("https://wa.me/8801826536129?text="+msg)}
+</script>
+</body>
+</html>
