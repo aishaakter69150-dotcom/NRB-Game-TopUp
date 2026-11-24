@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FF Uid TopUp (BD)</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Hind Siliguri,sans-serif}
+body{background:#f2f6f9;padding-bottom:90px}
+.topbar{background:white;padding:12px 15px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10;box-shadow:0 1px 5px rgba(0,0,0,0.08)}
+.logo{font-size:24px;font-weight:900;color:#0a2540}
+.logo span{color:#d92a2a}
+.login{background:#0a2540;color:white;border:none;padding:8px 18px;border-radius:6px;font-size:16px;font-weight:bold}
+.banner{background:white;margin:10px;border-radius:12px;padding:12px;display:flex;gap:12px;align-items:center}
+.banner img{width:90px;height:90px;border-radius:10px;object-fit:cover;background:#333}
+.banner b{font-size:19px}
+.banner span{background:#eee;padding:3px 10px;border-radius:20px;font-size:13px}
+.card{background:white;margin:10px;border-radius:12px;padding:15px}
+.card h2{font-size:22px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.num{background:#0a2540;color:white;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opt{border:1px solid #ddd;border-radius:8px;padding:12px 10px;display:flex;align-items:center;gap:8px;cursor:pointer;background:white}
+.opt.active{border:2px solid #d92a2a;background:#fff5f5}
+.opt .dot{width:20px;height:20px;border-radius:50%;border:2px solid #ccc;flex-shrink:0;background:white}
+.opt.active .dot{background:#d92a2a;border-color:#d92a2a}
+.opt b{font-size:14px}
+.opt span{color:#ff7a00;font-weight:900;font-size:14px;margin-left:auto;white-space:nowrap}
+.label{font-size:17px;margin-bottom:8px}
+input{width:100%;padding:12px;border:1px solid #0a2540;border-radius:8px;font-size:16px;outline:none}
+.pay-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pay{border:1px solid #ddd;border-radius:12px;overflow:hidden;cursor:pointer;text-align:center;background:white}
+.pay.active{border:2px solid #0a2540}
+.pay .pay-img{padding:20px 10px;font-size:17px;font-weight:bold}
+.pay p{background:#eee;padding:8px;text-align:left;font-size:14px}
+.bkash-box{background:#ffeef2;border:1px dashed #e2136e;border-radius:12px;padding:12px;text-align:center;margin-top:12px}
+.bkash-box h3{color:#e2136e}
+.bkash-num{font-size:22px;font-weight:bold;margin:6px 0}
+.copy{background:#e2136e;color:white;border:none;padding:7px 18px;border-radius:20px;font-weight:bold}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:white;display:flex;justify-content:space-between;align-items:center;padding:12px 15px;box-shadow:0 -2px 10px rgba(0,0,0,0.1);z-index:20}
+.order{background:#8b0000;color:white;border:none;padding:12px 25px;border-radius:8px;font-size:17px;font-weight:bold}
+.success{display:none;background:#d4edda;color:#155724;padding:12px;border-radius:10px;text-align:center;font-weight:bold;margin
